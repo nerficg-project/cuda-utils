@@ -14,7 +14,7 @@ if ENABLE_NVCC_LINEINFO:
     nvcc_flags.append('-lineinfo')
 
 cuda_extension = CUDAExtension(
-    name=f'_C',
+    name=f'{extension_name}._C',
     sources=[str(module_root / 'morton_encoding.cu')],
     include_dirs=[str(module_root)],
     extra_compile_args={'cxx': cxx_flags, 'nvcc': nvcc_flags}

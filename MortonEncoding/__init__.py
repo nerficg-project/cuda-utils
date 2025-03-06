@@ -6,7 +6,6 @@ extension_dir = Path(__file__).parent
 __extension_name__ = extension_dir.name
 __install_command__ = [
     'pip', 'install',
-    '-e',  # editable mode to allow for local development
     str(extension_dir),
     '--no-build-isolation',  # to build the extension using the current environment instead of creating a new one
 ]

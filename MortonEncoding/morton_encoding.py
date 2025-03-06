@@ -3,7 +3,7 @@
 """Utils/MortonEncoding: CUDA-accelerated morton code computation for 3d points."""
 
 import torch
-from . import _C
+from MortonEncoding import _C
 
 def morton_encode(positions: torch.Tensor) -> torch.Tensor:
     minimum_coordinates = positions.min(dim=0).values
